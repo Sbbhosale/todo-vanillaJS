@@ -9,9 +9,8 @@
 
 body{
     background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
-    border : 1px solid black;
     text-align: center;
-    height: 100vh;
+    height: 100%;
 }
 
 h1 {
@@ -20,43 +19,72 @@ h1 {
     padding : 5rem 0 2rem 0;
 }
 
-#input {
-    outline : none;
-    border: none;
-    padding  : .5rem .4rem;
-    width : 20rem;
-    border-radius: .6rem;
-    margin-bottom: 1rem;
-}
-
-#btn--add {
+#userInputContainer__input{
+    padding : .6rem .8rem;
+    width: 45%;
+    outline: none;
     border : none;
-    padding : .2rem .3rem;
-    border-radius: .6rem;
-    margin-left : .2rem;
-    border : 1px solid transparent;
-    position: absolute;
-    right : 30rem;
-    color: #3087ea;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+
 }
 
-#btn--add:hover {
-    background-color: #3087ea;
-    color : white;
+#userInputContainer__btn--add {
+    border: none;
+    font-size: 1.4rem;
+    padding: 0;
+    font-weight: bold;
+    background-color: white;
+    padding: .3rem .7rem;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
-#todoItemsContainer{
-    list-style-type: none;
+#userInputContainer__btn--add:hover{
+    background-color: black;
+    color: white;
+}
+
+#userInputContainer__btn--add:active {
+    background-color: white;
+    color: black;
+}
+
+.userInputContainer {
     display : flex;
-    flex-direction: column;
     justify-content: center;
-    border: 1px solid black;
 }
 
 .todoItemContainer__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width : 10rem;
-    border : 1px solid black;
+    /* border: 1px solid black; */
+    margin: 1rem auto;
+    width: 40%;
+    background-color: white;
+    padding-left: .5rem;
+}
+
+.btn {
+    padding: .9rem;
+    border: none;
+    background-color: white;
+}
+
+
+i {
+    pointer-events: none;
+}
+
+
+@media screen and (width <=500px ) {
+
+    #userInputContainer__input {
+        width: 70%;
+    }
+
+    .todoItemContainer__item {
+        width : 90%;
+    }
 }
