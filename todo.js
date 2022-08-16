@@ -33,8 +33,8 @@ function inputHandler() {
 
 
     // appending check and delete buttons in btn div
-        todoItemBtnSection.append(todoItemCheckBtn);
         todoItemBtnSection.append(todoItemDeleteBtn);
+        todoItemBtnSection.append(todoItemCheckBtn);
 
     // appending user value showing div in li
         todoItem.append(todoItemValueSection);
@@ -56,7 +56,11 @@ function addDeleteHandler(event){
     let item = event.target;
 
     if(item.classList[1] === 'todoItemContainer__item__btn--remove'){
-        item.parentElement.parentElement.remove();
+        item.parentElement.parentElement.classList.add('animated-delete');
+        item.parentElement.parentElement.addEventListener("transitionend",function(){
+            item.parentElement.parentElement.remove();
+        })
+        
     }
 
     if(item.classList[1] === 'todoItemContainer__item__btn--checked'){

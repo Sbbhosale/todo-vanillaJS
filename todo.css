@@ -21,23 +21,24 @@ h1 {
 
 #userInputContainer__input{
     padding : .6rem .8rem;
-    width: 45%;
+    width: 30%;
     outline: none;
     border : none;
     border-top-left-radius: .5rem;
     border-bottom-left-radius: .5rem;
-
+    box-shadow: 5px 10px 10px #4363c4;
 }
 
 #userInputContainer__btn--add {
     border: none;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     padding: 0;
     font-weight: bold;
     background-color: white;
     padding: .3rem .7rem;
     border-bottom-right-radius: 1rem;
     border-top-right-radius: 1rem;
+    box-shadow: 4px 7px 5px #345bd1;
 }
 
 #userInputContainer__btn--add:hover{
@@ -52,26 +53,56 @@ h1 {
 
 .userInputContainer {
     display : flex;
-    justify-content: center;
+    justify-content: center;    
 }
+
+#todoItemsContainer{
+    margin-top: 4rem;
+}
+
 
 .todoItemContainer__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid black; */
-    margin: 1rem auto;
+    margin: .5rem auto;
     width: 40%;
     background-color: white;
     padding-left: .5rem;
+    transition: all 1s ease;
+}
+
+.animated-delete {
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 .btn {
-    padding: .9rem;
+    padding: .6rem .7rem;
     border: none;
     background-color: white;
 }
 
+.todoItemContainer__item__btn--checked{
+    background-color: #0f172a;
+    color: white;
+}
+
+.todoItemContainer__item__btn--checked:active {
+    background-color: #405265;
+}
+
+
+.todoItemContainer__item__btn--remove{
+    background-color: #ef233c;
+    color: white;
+}
+
+
+.todoItemContainer__item__btn--remove:active{
+    background-color: #ea4c5f;
+    color: white;
+}
 
 i {
     pointer-events: none;
